@@ -1,0 +1,459 @@
+.body {
+    background-color:#f0f1f2;
+}
+.navigation-bar {
+    width: 100%;  /* i'm assuming full width */
+    height: 100px; /* change it to desired width */
+	min-width: 1600px;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 270px;
+    height: 80px;
+    margin-right: 100px;
+	margin-left: 15px;
+    margin-top: 0px;    /* if you want it vertically middle of the navbar. */
+    background-color:white;
+}
+.navigation-bar > a {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 30px;
+    margin-top: 10px;
+    height: 80px;        /* if you want it to take the full height of the bar */
+    line-height: 80px;    /* if you want it vertically middle of the navbar */
+    font-family: Bahnschrift;
+    font-size: 18px;
+}
+.navigation-bar > a:link{
+    color: black;
+    text-decoration: none;
+    font-weight: bold
+}
+.navigation-bar > a:visited{
+    color: black;
+    text-decoration: none;
+}
+.navigation-bar > a:hover{
+    color: #b08f26;
+    background color: yellow;
+}
+
+.infobar {
+	background-color: #3269a8;
+	text-align: center;
+	font-family: Bahnschrift;
+	font-size: 16px;
+}
+
+.infotext0 {
+	color: white;
+	display: inline-block;
+	margin-right: 100px;
+}
+
+.infotext1 {
+	color: white;
+	display: inline-block;
+	margin-right: 100px;
+}
+
+.infotext2 {
+	color: white;
+	display: inline-block;
+}
+
+/* body info */
+
+.maincontainer {
+   position: relative;
+   text-align: center;
+   color: white;
+   width: 100%;
+}
+.titletext {
+   position: absolute;
+   top: 8px;
+   left: 16px;
+   font-family: Sans-serif;
+   font-weight: bold;
+   font-size: 50px;
+}
+.titletext2 {
+   position: absolute;
+   top: 75px;
+   left: 16px;
+   font-family: Sans-serif;
+   font-weight: bold;
+   font-size: 30px;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: Bahnschrift;
+}
+
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: default;
+  width: 5%;
+}
+
+button:hover {
+  opacity: 0.8;
+  cursor: default;
+}
+
+button:visited {
+  cursor: default;
+}
+
+.homelogin {
+   width:8%;
+   height:50%;
+   margin-top:23px; 
+   float:right; 
+   margin-right: 50px;
+   font-family: Bahnschrift;
+   font-size: 18px;
+   background-color: #b08f26;
+   color: black;
+   
+}
+
+.loginbutton {
+  width: 100%;
+  background-color: #b08f26;
+  color: black;
+  font-family: Bahnschrift;
+}
+
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 10px 0 0px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 50%;
+  border-radius: 100%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+  font-family: Bahnschrift;
+  float: right;
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+
+.footer {
+  float: center;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 50px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+
+/* MY GAMES */
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 20%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 20px; /* Add some space below the input */
+  margin-left: 10px;
+}
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 90%; /* Full-width */
+  border: 2px solid #ddd; /* Add a grey border */
+  font-size: 14px; /* Increase font-size */
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 5px; /* Add padding */
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #b08f26;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  font-size: 16px;
+  border: 1px solid #ddd; /* Add a grey border */
+  cursor: pointer;
+  width: 150%;
+  vertical-align: middle;
+  margin-bottom: 5px;
+  height: 50px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+  border: 2px solid #ddd;
+}
+
+/* The search field */
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* The search field when it gets focus/clicked on */
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropbtn {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput2 {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput2:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    float: left;
+    height: 30px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:20px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/* NEWS */
+
+.newscontainer1 {
+	font-family: Bahnschrift;
+	width:80%;
+	height: 350px;
+	border-style: groove;
+	float: left;
+	background: gray;
+	color: white;
+	
+}
+
+.newstitle1 {
+	font-size: 40px;
+	font-weight: bold;
+	margin-left: 15px;
+}
+
+.newsbody1 {
+	font-size: 15px;
+	margin-left: 15px;
+}
+.newscontainer2 {
+	font-family: Bahnschrift;
+	width:20%;
+	height: 350px;
+	border-style: groove;
+	display: inline-block;
+	position: relative;
+	float: right;
+	background: gray;
+	color: white;
+	
+}
