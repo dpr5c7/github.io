@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="Home.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<body class="body">
+	
+	<!-- Navigation Bar -->
+		<nav class="navigation-bar">
+			<a href="Home.html"> <img class="logo" src="GS.png"> </a>
+			<a href="News.html">NEWS</a>
+			<a href="#Games">GAMES</a>
+			<a href="My Games.html">MY LIST</a>
+			<a href="#reviews">REVIEWS</a>
+			<!-- <a href="#tour">MY RECOMMENDATIONS</a> -->
+			<!-- <a href="#contact">MY ANALYTICS</a> -->
+			<a href="#discussionboard">DISCUSSION BOARD</a>
+			
+			<button onclick="document.getElementById('id01').style.display='block'" class="homelogin">Login</button>
+
+			<!-- The Modal -->
+			<div id="id01" class="modal">
+				<form class="modal-content animate" action="/action_page.php" method="post">
+					<div class="imgcontainer">
+						<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+						<img src="GS-small.png" alt="Avatar" class="avatar">
+					</div>
+
+					<div class="container">
+						<label for="uname"><b>Username</b></label>
+						<input type="text" placeholder="Enter Username" name="uname" required>
+
+						<label for="psw"><b>Password</b></label>
+						<input type="password" placeholder="Enter Password" name="psw" required>
+					
+						<button class="loginbutton" type="submit">Login</button>
+						<label>
+						<input type="checkbox" checked="checked" name="remember"> Remember me
+						</label>
+					</div>
+
+					<div class="container" style="background-color:#f1f1f1">
+						<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+						<span class="psw">Forgot <a href="#">password?</a></span>
+					</div>
+				</form>
+			</div>
+
+			<script>
+				// Get the modal
+				var modal = document.getElementById('id01');
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) {
+					if (event.target == modal) {
+					modal.style.display = "none";
+					}
+				}
+			</script>
+		</nav>
+		<div class="infobar">
+			<div class="infotext0"># of Gamers: 300</div>
+			<div class="infotext1">Games Played: 1,343</div>
+			<div class="infotext2">Games Reviewed: 4,344</div>
+		</div>
+		
+		<input type="text" id="myInput" onkeyup="Searchboxfunction()" placeholder="Search for game titles...">
+
+		<select id="mylist" onchange="myFunction()" class='form-control'>
+			<option>All</option>
+			<option>Completed</option>
+			<option>Started</option>
+			<option>Want to Play</option>
+			<option>Abandoned</option>
+		</select>
+			<table id="myTable">
+			  <tr class="header">
+				<th style="width:20%;">Game Title</th>
+				<th style="width:10%;">System</th>
+				<th style="width:10%;">Category</th>
+				<th style="width:10%;">Rating</th>
+				<th style="width:10%;">Date Completed</th>
+				<th style="width:10%;">Time to Beat</th>
+				<th style="width:20%;">Notes</th>
+				<th style="width:10%;">Review Link</th>
+			  </tr>
+			  <tr>
+				<td>Ocarina of Time</td>
+				<td>N64</td>
+				<td>Completed</td>
+				<td>
+					<div class="rate">
+						<input type="radio" id="star5" name="rate" value="5" />
+						<label for="star5" title="text">5 stars</label>
+						<input type="radio" id="star4" name="rate" value="4" />
+						<label for="star4" title="text">4 stars</label>
+						<input type="radio" id="star3" name="rate" value="3" />
+						<label for="star3" title="text">3 stars</label>
+						<input type="radio" id="star2" name="rate" value="2" />
+						<label for="star2" title="text">2 stars</label>
+						<input type="radio" id="star1" name="rate" value="1" />
+						<label for="star1" title="text">1 star</label>
+					</div>
+				</td>
+			  </tr>
+			  <tr>
+				<td>God of War</td>
+				<td>PS4</td>
+				<td>Started</td>
+				<td>
+					<div class="rate">
+						<input type="radio" id="star5" name="rate" value="5" />
+						<label for="star5" title="text">5 stars</label>
+						<input type="radio" id="star4" name="rate" value="4" />
+						<label for="star4" title="text">4 stars</label>
+						<input type="radio" id="star3" name="rate" value="3" />
+						<label for="star3" title="text">3 stars</label>
+						<input type="radio" id="star2" name="rate" value="2" />
+						<label for="star2" title="text">2 stars</label>
+						<input type="radio" id="star1" name="rate" value="1" />
+						<label for="star1" title="text">1 star</label>
+					</div>
+				</td>
+			  </tr>
+			  <tr>
+				<td>Last of Us</td>
+				<td>PS4</td>
+				<td>Want to Play</td>
+				<td>
+					<div class="rate">
+						<input type="radio" id="star5" name="rate" value="5" />
+						<label for="star5" title="text">5 stars</label>
+						<input type="radio" id="star4" name="rate" value="4" />
+						<label for="star4" title="text">4 stars</label>
+						<input type="radio" id="star3" name="rate" value="3" />
+						<label for="star3" title="text">3 stars</label>
+						<input type="radio" id="star2" name="rate" value="2" />
+						<label for="star2" title="text">2 stars</label>
+						<input type="radio" id="star1" name="rate" value="1" />
+						<label for="star1" title="text">1 star</label>
+					</div>
+				</td>
+			  </tr>
+			  <tr>
+				<td>Glover</td>
+				<td>N64</td>
+				<td>Abandoned</td>
+				<td>
+					<div class="rate">
+						<input type="radio" id="star5" name="rate" value="5" />
+						<label for="star5" title="text">5 stars</label>
+						<input type="radio" id="star4" name="rate" value="4" />
+						<label for="star4" title="text">4 stars</label>
+						<input type="radio" id="star3" name="rate" value="3" />
+						<label for="star3" title="text">3 stars</label>
+						<input type="radio" id="star2" name="rate" value="2" />
+						<label for="star2" title="text">2 stars</label>
+						<input type="radio" id="star1" name="rate" value="1" />
+						<label for="star1" title="text">1 star</label>
+					</div>
+				</td>
+			  </tr>
+			</table>
+
+			
+			<script>
+			function Searchboxfunction() {
+			  // Declare variables
+			  var input, filter, table, tr, td, i, txtValue;
+			  input = document.getElementById("myInput");
+			  filter = input.value.toUpperCase();
+			  table = document.getElementById("myTable");
+			  tr = table.getElementsByTagName("tr");
+
+			  // Loop through all table rows, and hide those who don't match the search query
+			  for (i = 0; i < tr.length; i++) {
+				td = tr[i].getElementsByTagName("td")[0];
+				if (td) {
+				  txtValue = td.textContent || td.innerText;
+				  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+					tr[i].style.display = "";
+				  } else {
+					tr[i].style.display = "none";
+				  }
+				}
+			  }
+			}
+			</script>
+			
+			
+			
+			
+			<script>
+			function myFunction() {
+			  var input, filter, table, tr, td, i;
+			  input = document.getElementById("mylist");
+			  filter = input.value.toUpperCase();
+			  table = document.getElementById("myTable");
+			  tr = table.getElementsByTagName("tr");
+			  if (filter == "ALL"){
+			  for (i = 0; i < tr.length; i++) {
+				tr[i].style.display = "";
+				} 
+			  } else {
+			  for (i = 0; i < tr.length; i++) {
+				td = tr[i].getElementsByTagName("td")[2];
+				if (td) {
+				  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+					tr[i].style.display = "";
+				  } else {
+					tr[i].style.display = "none";	
+					}
+				  }
+				}       
+			  }
+			}
+			</script>
+			
+			
+			
+			<script>
+			
+			
+			
+		<!-- Footer -->
+		<footer class="footer">
+			<a href="#"><i class="fa fa-facebook-official"></i></a>
+			<a href="#"><i class="fa fa-pinterest-p"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-flickr"></i></a>
+			<a href="#"><i class="fa fa-linkedin"></i></a>
+			<p class="footer2">
+				Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+			</p>
+		</footer>
+	</body>
+</html>
