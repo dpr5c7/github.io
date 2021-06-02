@@ -6,6 +6,19 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<body class="body">
 	
+	<script>
+		const baseURL = 'https://api.sampleapis.com/css-color-names/colors';
+		fetch(baseURL)
+  			.then(resp => resp.json())
+  			.then(data => displayData(data));
+
+		function displayData(data) {
+  			document.querySelector("pre").innerHTML = JSON.stringify(data, null, 2);
+		}
+	</script>
+	
+	<pre>JSONGoesHere</pre>
+		
 	<!-- Navigation Bar -->
 		<nav class="navigation-bar">
 			<a href="home.html"> <img class="logo" src="images/GS.png"> </a>
