@@ -7,17 +7,25 @@
 	<body class="body">
 	
 	<script>
+	async function testme() {
 		const baseURL = 'https://api.sampleapis.com/css-color-names/colors';
-		fetch(baseURL)
+		var colorpicker = document.getElementById('textf').value
+		const fetchstring = (`${baseURL}?name=`+ colorpicker)
+		fetch(fetchstring)
   			.then(resp => resp.json())
   			.then(data => displayData(data));
 
 		function displayData(data) {
-  			document.querySelector("pre").innerHTML = JSON.stringify(data, null, 2);
+  		document.querySelector("pre").innerHTML = JSON.stringify(data[0].hex, null, 2);
 		}
+	}
+
+	testme()
 	</script>
 	
-	<pre>JSONGoesHere</pre>
+	<p> <input id="textf" value="purple"></input></p>
+	<p> <button id="buttonbaby" onclick="testme();">Click Me</button></p>
+	<pre>JSON GOES HERE</pre>
 		
 	<!-- Navigation Bar -->
 		<nav class="navigation-bar">
