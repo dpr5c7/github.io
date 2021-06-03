@@ -8,22 +8,6 @@
 	<script src="scripts/apitest.js" type="text/javascript"></script>
 	<body class="body">
 	
-	<script>
-	async function testme() {
-		const baseURL = 'https://api.sampleapis.com/css-color-names/colors';
-		var colorpicker = document.getElementById('textf').value
-		const fetchstring = (`${baseURL}?name=`+ colorpicker)
-		fetch(fetchstring)
-  			.then(resp => resp.json())
-  			.then(data => displayData(data));
-
-		function displayData(data) {
-  		document.querySelector("pre").innerHTML = JSON.stringify(data[0].hex, null, 2);
-		}
-	}
-
-	testme()
-	</script>
 	
 	<p> <input id="textf" value="red"></input></p>
 	<p> <button id="buttonbaby" onclick="testme();">Click Me</button></p>
