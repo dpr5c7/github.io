@@ -27,3 +27,18 @@
   const promise = auth.signInWithEmailAndPassword(email, pass);
   promise.catch(e => console.log(e.message));
 });
+
+btnSignUp.addEventListener('click', e => {
+ // Get email and pass
+  const email = testemail.value;
+  const pass = testpass.value;
+  const auth = firebase.auth();
+ // Sign in
+  const promise = auth.createUserWithEmailAndPassword(email, pass);
+  promise.catch(e => console.log(e.message));
+});
+
+btnLogout.addEventListener('click', e => {
+  firebase.auth().signOut();
+  console.log('logged out')
+});
