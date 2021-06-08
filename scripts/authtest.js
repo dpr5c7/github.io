@@ -8,6 +8,7 @@
   appId: "1:985528869080:web:97fa46d30068b7dd56b7ad",
   measurementId: "G-6W8BG6TNPG"
 }; 
+  
   firebase.initializeApp(config);
  	var clouddb = firebase.firestore();
   getElements();
@@ -53,16 +54,16 @@ function logOut() {
 function submitToDB() {
 const testInputa = document.getElementById('testInput');
 const testInputb = document.getElementById('testInput2');
-var testdata = {
-  	input1: testInputa,
-    input2: testInputb
-  	}
-    
-    clouddb.collection('test1').doc('test2').set(testdata)
-    .then(function (docRef){
-    	console.log("Document written");
+var testData = {
+	test1: testInputa.value,
+  test2: testInputb.value};
+  
+console.log(testData);    
+    clouddb.collection('test1').add(testData)
+    .then((docRef) => {
+    	console.log("Document written with ID: ", docRef.id);
     })
-    .catch(function(error){
-    	console.error("Error adding document",error);
-    })
+    .catch((error) => {
+    	console.error("Error adding document: ",error);
+    });
 }
