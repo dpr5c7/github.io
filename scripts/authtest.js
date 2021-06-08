@@ -1,4 +1,5 @@
- // Initialize Firebase
+(function() { 
+// Initialize Firebase
   const config = {
   apiKey: "AIzaSyBRRG-5SqlUsfo_h1fhaaIeTf_2b5QSJqY",
   authDomain: "gamervault-fd419.firebaseapp.com",
@@ -9,7 +10,7 @@
   measurementId: "G-6W8BG6TNPG"
 }; 
   firebase.initializeApp(config);
-
+ 
 // Get elements
   const testemail = document.getElementById('testemail');
   const testpass = document.getElementById('testpass');
@@ -27,3 +28,4 @@
   promise.catch(e => console.log(e.message));
 });
 
+}());
