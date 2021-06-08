@@ -1,4 +1,3 @@
-function () {
  // Initialize Firebase
   const config = {
   apiKey: "AIzaSyBRRG-5SqlUsfo_h1fhaaIeTf_2b5QSJqY",
@@ -26,6 +25,5 @@ function () {
  // Sign in
   const promise = auth.signInWithEmailAndPassword(email, pass);
   promise.catch(e => console.log(e.message));
-}
 
 
