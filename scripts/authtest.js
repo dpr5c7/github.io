@@ -19,7 +19,7 @@
   const btnLogout = document.getElementById('testlogout');
 
  // Add login event
- btnLogin.addEventListener('click', e==> {
+ btnLogin.addEventListener('click', e=> {
   const email = testemail.value;
   const pass = testpass.value;
   const auth = firebase.auth();
