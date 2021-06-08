@@ -9,17 +9,21 @@
   measurementId: "G-6W8BG6TNPG"
 }; 
   firebase.initializeApp(config);
+  getElements()
  
 // Get elements
+function getElements() {  
   const testemail = document.getElementById('testemail');
   const testpass = document.getElementById('testpass');
   const btnLogin = document.getElementById('testlogin');
   const btnSignUp = document.getElementById('testsignup');
   const btnLogout = document.getElementById('testlogout');
-  
+};
+
  // Add login event
 function logIn() {
  // Get email and pass
+  getElements();
   const email = testemail.value;
   const pass = testpass.value;
   const auth = firebase.auth();
@@ -30,6 +34,7 @@ function logIn() {
 
 function signUp() {
  // Get email and pass
+  getElements();
   const email = testemail.value;
   const pass = testpass.value;
   const auth = firebase.auth();
