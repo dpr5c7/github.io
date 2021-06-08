@@ -9,15 +9,15 @@
   measurementId: "G-6W8BG6TNPG"
 }; 
   firebase.initializeApp(config);
-  getElements()
- 
+ 	var clouddb = firebase.firestore();
+  getElements();
+  
 // Get elements
 function getElements() {  
   const testEmail = document.getElementById('testEmail');
   const testPass = document.getElementById('testPass');
-  const btnLogin = document.getElementById('testLogin');
-  const btnSignUp = document.getElementById('testSignUp');
-  const btnLogout = document.getElementById('testLogout');
+  const testInputa = document.getElementById('testInput');
+  const testInputb = document.getElementById('testInput2');
 };
 
  // Add login event
@@ -30,6 +30,7 @@ function logIn() {
  // Sign in
   const promise = auth.signInWithEmailAndPassword(email, pass);
   promise.catch(e => console.log(e.message));
+  console.log("signed in")
 };
 
 function signUp() {
@@ -41,9 +42,27 @@ function signUp() {
  // Sign in
   const promise = auth.createUserWithEmailAndPassword(email, pass);
   promise.catch(e => console.log(e.message));
+  console.log("signed up")
 };
 
 function logOut() {
   firebase.auth().signOut();
   console.log('logged out');
 };
+
+function submitToDB() {
+const testInputa = document.getElementById('testInput');
+const testInputb = document.getElementById('testInput2');
+var testdata = {
+  	input1: testInputa,
+    input2: testInputb
+  	}
+    
+    clouddb.collection('test1').doc('test2').set(testdata)
+    .then(function (docRef){
+    	console.log("Document written");
+    })
+    .catch(function(error){
+    	console.error("Error adding document",error);
+    })
+}
