@@ -18,7 +18,7 @@
   const btnLogout = document.getElementById('testlogout');
   
  // Add login event
- btnLogin.addEventListener('click', e => {
+function logIn() {
  // Get email and pass
   const email = testemail.value;
   const pass = testpass.value;
@@ -26,9 +26,9 @@
  // Sign in
   const promise = auth.signInWithEmailAndPassword(email, pass);
   promise.catch(e => console.log(e.message));
-});
+};
 
-btnSignUp.addEventListener('click', e => {
+function signUp() {
  // Get email and pass
   const email = testemail.value;
   const pass = testpass.value;
@@ -36,9 +36,9 @@ btnSignUp.addEventListener('click', e => {
  // Sign in
   const promise = auth.createUserWithEmailAndPassword(email, pass);
   promise.catch(e => console.log(e.message));
-});
+};
 
-btnLogout.addEventListener('click', e => {
+function logOut() {
   firebase.auth().signOut();
-  console.log('logged out')
-});
+  console.log('logged out');
+};
