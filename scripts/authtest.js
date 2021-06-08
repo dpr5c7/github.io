@@ -17,6 +17,15 @@ function () {
   const btnLogin = document.getElementById('testlogin');
   const btnSignUp = document.getElementById('testsignup');
   const btnLogout = document.getElementById('testlogout');
+
+ // Add login event
+ btnLogin.addEventListener('click', e==> {
+  const email = testemail.value;
+  const pass = testpass.value;
+  const auth = firebase.auth();
+ // Sign in
+  const promise = auth.signInWithEmailAndPassword(email, pass);
+  promise.catch(e => console.log(e.message));
 }
 
 
