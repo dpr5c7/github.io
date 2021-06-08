@@ -1,6 +1,6 @@
 (function() { 
 // Initialize Firebase
-  const config = {
+  var config = {
   apiKey: "AIzaSyBRRG-5SqlUsfo_h1fhaaIeTf_2b5QSJqY",
   authDomain: "gamervault-fd419.firebaseapp.com",
   projectId: "gamervault-fd419",
