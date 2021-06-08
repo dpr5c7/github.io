@@ -24,8 +24,8 @@ function getElements() {
 function logIn() {
  // Get email and pass
   getElements();
-  const email = testemail.value;
-  const pass = testpass.value;
+  const email = testEmail.value;
+  const pass = testPass.value;
   const auth = firebase.auth();
  // Sign in
   const promise = auth.signInWithEmailAndPassword(email, pass);
@@ -35,8 +35,8 @@ function logIn() {
 function signUp() {
  // Get email and pass
   getElements();
-  const email = testemail.value;
-  const pass = testpass.value;
+  const email = testEmail.value;
+  const pass = testPass.value;
   const auth = firebase.auth();
  // Sign in
   const promise = auth.createUserWithEmailAndPassword(email, pass);
