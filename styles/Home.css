@@ -142,6 +142,12 @@ button:visited {
   font-family: Bahnschrift;
 }
 
+.createNewAccount }
+width: 100%;
+  background-color: #b08f26;
+  color: black;
+  font-family: Bahnschrift;
+}
 
 /* Extra styles for the cancel button */
 .cancelbtn {
