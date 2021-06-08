@@ -13,11 +13,11 @@
  
 // Get elements
 function getElements() {  
-  const testemail = document.getElementById('testemail');
-  const testpass = document.getElementById('testpass');
-  const btnLogin = document.getElementById('testlogin');
-  const btnSignUp = document.getElementById('testsignup');
-  const btnLogout = document.getElementById('testlogout');
+  const testEmail = document.getElementById('testEmail');
+  const testPass = document.getElementById('testPass');
+  const btnLogin = document.getElementById('testLogin');
+  const btnSignUp = document.getElementById('testSignUp');
+  const btnLogout = document.getElementById('testLogout');
 };
 
  // Add login event
