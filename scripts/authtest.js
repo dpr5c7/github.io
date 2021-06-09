@@ -10,7 +10,7 @@
 }; 
   
   firebase.initializeApp(config);
-  var clouddb = firebase.firestore();
+ 	var clouddb = firebase.firestore();
   getElements();
   
 // Get elements
@@ -69,26 +69,47 @@ console.log(testData);
 }
 
 function getUserData() {
-  var user = firebase.auth().currentUser;
-  var name, email, photoUrl, uid, emailVerified, signedIn;
+	var user = firebase.auth().currentUser;
+	var name, email, photoUrl, uid, emailVerified, signedIn;
 	
-  if (user!= null) {
-	name = user.displayName;
-	email = user.email;
-	photoUrl = user.photoURL;
-	emailVerified = user.emailVerified;
-	uid = user.uid;
-    	signedIn = true;
+	if (user!= null) {
+		name = user.displayName;
+		email = user.email;
+		photoUrl = user.photoURL;
+		emailVerified = user.emailVerified;
+		uid = user.uid;
+    signedIn = true;
 	};
   
   if (user == null) {
   	signedIn = false;
   };
   
-  const test1 = document.getElementById('UserInfo1');
+	const test1 = document.getElementById('UserInfo1');
   const test2 = document.getElementById('UserInfo2');
   const test3 = document.getElementById('UserInfo3');
-  test1.value = email
+	test1.value = email
   test2.value = uid
   test3.value = signedIn
+}
+
+function getDBData() {
+	var docRef = clouddb.collection("test1").doc("gE86HdKvL2wIltSQE1zH");
+
+docRef.get().then((doc) => {
+    if (doc.exists) {
+        console.log("Document data:", doc.data());
+         var infoStuff = doc.data()
+         const test1 = document.getElementById('DBInfo1');
+         const test2 = document.getElementById('DBInfo2');
+         test1.value = infoStuff.test1
+         test2.value = infoStuff.test2
+         
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
 }
