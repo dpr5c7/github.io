@@ -10,7 +10,7 @@
 }; 
   
   firebase.initializeApp(config);
- 	var clouddb = firebase.firestore();
+  var clouddb = firebase.firestore();
   getElements();
   
 // Get elements
