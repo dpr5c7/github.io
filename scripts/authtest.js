@@ -69,16 +69,26 @@ console.log(testData);
 }
 
 function getUserData() {
-	var user = firebase.auth().currentUser;
-	var name, email, photoUrl, uid, emailVerified;
+  var user = firebase.auth().currentUser;
+  var name, email, photoUrl, uid, emailVerified, signedIn;
 	
-	if (user!= null) {
-		name = user.displayName;
-		email = user.email;
-		photoUrl = user.photoURL;
-		emailVerified = user.emailVerified;
-		uid = user.uid;
-	}
-	const testInputa = document.getElementById('testInput');
-	testInputa.value = email
+  if (user!= null) {
+	name = user.displayName;
+	email = user.email;
+	photoUrl = user.photoURL;
+	emailVerified = user.emailVerified;
+	uid = user.uid;
+    	signedIn = true;
+	};
+  
+  if (user == null) {
+  	signedIn = false;
+  };
+  
+  const test1 = document.getElementById('UserInfo1');
+  const test2 = document.getElementById('UserInfo2');
+  const test3 = document.getElementById('UserInfo3');
+  test1.value = email
+  test2.value = uid
+  test3.value = signedIn
 }
