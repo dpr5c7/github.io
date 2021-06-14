@@ -136,6 +136,20 @@ button:visited {
    
 }
 
+.FAQButton {
+   width:8%;
+   height:50%;
+   margin-top:23px; 
+   float:right; 
+   margin-right: 50px;
+   font-family: Bahnschrift;
+   font-size: 18px;
+   background-color: #b08f26;
+   color: black;
+   border-radius: 50%;
+   
+}
+
 .loginbutton {
   width: 100%;
   background-color: #b08f26;
