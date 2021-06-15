@@ -34,10 +34,10 @@ background-color:white;
 }
 
 button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: default;
+background-color: #4CAF50;
+color: white;
+border: none;
+cursor: default;
 }
 
 button:hover {
@@ -98,50 +98,53 @@ opacity: 0.7;
 }
 
 .infobar {
-	background-color: #3269a8;
-	text-align: center;
-	font-family: Bahnschrift;
-	font-size: 16px;
+background-color: #3269a8;
+text-align: center;
+font-family: Bahnschrift;
+font-size: 16px;
 }
 
 .infotext0 {
-	color: white;
-	display: inline-block;
-	margin-right: 100px;
+color: white;
+display: inline-block;
+text-align: center;
+margin-right: 50px;
 }
 
 .infotext1 {
-	color: white;
-	display: inline-block;
-	margin-right: 100px;
+color: white;
+display: inline-block;
+text-align:center;
 }
 
 .infotext2 {
-	color: white;
-	display: inline-block;
+color: white;
+display: inline-block;
+text-align: center;
+margin-left: 50px;
 }
 
 /* body info */
 
 .maincontainer {
-   position: relative;
-   text-align: center;
-   color: white;
-   width: 100%;
+ position: relative;
+ text-align: center;
+ color: white;
+ width: 100%;
 }
 .titletext {
-   position: absolute;
-   top: 8px;
-   left: 16px;
-   font-family: Sans-serif;
-   font-weight: bold;
-   font-size: 50px;
+ position: absolute;
+ top: 8px;
+ left: 16px;
+ font-family: Sans-serif;
+ font-weight: bold;
+ font-size: 50px;
 }
 .titletext2 {
-   position: absolute;
-   top: 75px;
-   left: 16px;
-   font-family: Sans-serif;
-   font-weight: bold;
-   font-size: 30px;
+ position: absolute;
+ top: 75px;
+ left: 16px;
+ font-family: Sans-serif;
+ font-weight: bold;
+ font-size: 30px;
 }
