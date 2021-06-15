@@ -1,0 +1,74 @@
+body {
+background-color:#f0f1f2;
+}
+
+nav {
+position: relative;
+height: 100px;
+}
+
+nav > a:hover{
+color: #b08f26;
+background-color: yellow;
+}
+
+nav > a {
+display: inline-block;
+margin: 40px 0 0 20px;
+font-family: Bahnschrift;
+font-size: 18px;
+font-weight: bold;
+}
+
+.logo {
+display: inline-block;
+background-color: white;
+padding: 1% 1% 1% 1%;
+}
+
+button {
+display: inline-block;
+background-color: #b08f26;
+color: black;
+padding: 14px 20px 14px 20px;
+border: none;
+cursor: default;
+font-family: Bahnschrift;
+font-size: 18px;
+margin: 23px 10px 0 0;
+float: right;
+}
+
+button:hover {
+opacity: 0.8;
+cursor: default;
+}
+
+#loginButton {
+border-radius: 20px;
+}
+
+#FAQButton {
+border-radius: 50%;
+}
+
+.footer {
+float: center;
+text-align: center;
+margin-bottom: 15px;
+}
+
+/* Style all font awesome icons */
+.fa {
+padding: 20px;
+font-size: 50px;
+width: 100px;
+text-align: center;
+text-decoration: none;
+color: black;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+opacity: 0.7;
+}
