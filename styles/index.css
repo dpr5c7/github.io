@@ -34,6 +34,15 @@ background-color:white;
 }
 
 button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: default;
+  width: 5%;
+}
+
+.homeButton {
 display: inline-block;
 background-color: #b08f26;
 color: black;
