@@ -22,8 +22,13 @@ font-weight: bold;
 
 .logo {
 display: inline-block;
-background-color: white;
-padding: 1% 1% 1% 1%;
+vertical-align: top;
+width: 270px;
+height: 80px;
+margin-right: 100px;
+margin-left: 15px;
+margin-top: 0px;    /* if you want it vertically middle of the navbar. */
+background-color:white;
 }
 
 button {
