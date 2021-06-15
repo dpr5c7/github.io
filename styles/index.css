@@ -51,12 +51,14 @@ opacity: 0.8;
 cursor: default;
 }
 
-#homeLogin {
+.homeLogin {
 border-radius: 20px;
+margin: 23px 10px 0 0;
 }
 
-#FAQButton {
+.FAQButton {
 border-radius: 50%;
+margin: 23px 10px 0 0;
 }
 
 .footer {
