@@ -42,7 +42,27 @@ button {
   width: 5%;
 }
 
-.homeButton {
+button:hover {
+opacity: 0.8;
+cursor: default;
+}
+
+.homeLogin {
+display: inline-block;
+background-color: #b08f26;
+color: black;
+padding: 14px 20px 14px 20px;
+border: none;
+cursor: default;
+font-family: Bahnschrift;
+font-size: 18px;
+margin: 23px 10px 0 0;
+float: right;	
+border-radius: 20px;
+margin: 23px 10px 0 0;
+}
+
+.FAQButton {
 display: inline-block;
 background-color: #b08f26;
 color: black;
@@ -53,19 +73,6 @@ font-family: Bahnschrift;
 font-size: 18px;
 margin: 23px 10px 0 0;
 float: right;
-}
-
-button:hover {
-opacity: 0.8;
-cursor: default;
-}
-
-.homeLogin {
-border-radius: 20px;
-margin: 23px 10px 0 0;
-}
-
-.FAQButton {
 border-radius: 50%;
 margin: 23px 10px 0 0;
 }
