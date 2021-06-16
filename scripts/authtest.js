@@ -58,10 +58,11 @@ var testData = {
 	test1: testInputa.value,
   test2: testInputb.value};
   
-console.log(testData);    
-    clouddb.collection('test1').add(testData)
-    .then((docRef) => {
-    	console.log("Document written with ID: ", docRef.id);
+console.log(testData);
+		//set() to initially set and update() to update
+    clouddb.collection('test1').doc('test3').set(testData)
+    .then(() => {
+    	console.log("Document written!");
     })
     .catch((error) => {
     	console.error("Error adding document: ",error);
@@ -94,7 +95,7 @@ function getUserData() {
 }
 
 function getDBData() {
-	var docRef = clouddb.collection("test1").doc("gE86HdKvL2wIltSQE1zH");
+	var docRef = clouddb.collection("test1").doc("test3");
 
 docRef.get().then((doc) => {
     if (doc.exists) {
