@@ -50,7 +50,7 @@ window.onload = function() {
   var user = firebase.auth().currentUser;
   var name, email, photoUrl, uid, emailVerified, signedIn;
 
-  if (firebase.auth().currentUser != null) {
+  if (user !== null) {
     name = user.displayName;
     email = user.email;
     photoUrl = user.photoURL;
@@ -64,7 +64,7 @@ window.onload = function() {
     userHeaderText.innerHTML = "Welcome" + name + "!";
   }
 
-  if (firebase.auth().currentUser == null) {
+  if (user == null) {
     signedIn = false;
     indexLogin.style.visibility = "";
     indexSignup.style.visibility = "";
