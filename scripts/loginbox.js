@@ -27,6 +27,12 @@ signupButton.addEventListener("click", function signUp() {
   // Sign in
   const promise = auth.createUserWithEmailAndPassword(email, pass);
   promise.catch(e => console.log(e.message));
+  
+  const user = firebase.auth().currentUser;
+  const usernameInput = document.querySelector('.usernameInput').value;
+  user.updateProfile({
+    	displayName: usernameInput
+    });
   console.log("signed up")
 })
 }
@@ -50,7 +56,7 @@ if (user != null) {
   indexSignup.style.visibility = "hidden";
   indexLogout.style.visibility = "";
   userHeaderText.style.visibility = "";
-  userHeaderText.innerHTML = "Welcome" + email + "!";
+  userHeaderText.innerHTML = "Welcome" + name + "!";
 }
 
 if (user == null) {
