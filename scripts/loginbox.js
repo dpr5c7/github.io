@@ -50,6 +50,7 @@ if (user != null) {
   indexSignup.style.visibility = "hidden";
   indexLogout.style.visibility = "";
   userHeaderText.style.visibility = "";
+  userHeaderText.innerHTML = "Welcome" + email + "!";
 }
 
 if (user == null) {
