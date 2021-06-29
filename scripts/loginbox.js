@@ -18,6 +18,7 @@ const emailInput = document.querySelector('.emailInput');
 const passInput = document.querySelector('.passInput');
 const signupButton = document.querySelector('.signupButton');
 
+if (signupButton) {
 signupButton.addEventListener("click", function signUp() {
   // Get email and pass
   const email = emailInput.value;
@@ -28,6 +29,7 @@ signupButton.addEventListener("click", function signUp() {
   promise.catch(e => console.log(e.message));
   console.log("signed up")
 })
+}
 
 // Update Login, Signup, Logout Buttons
 const indexLogin = document.querySelector('#indexLogin');
