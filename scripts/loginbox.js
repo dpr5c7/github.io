@@ -32,9 +32,12 @@ signupButton.addEventListener("click", function signUp() {
   const usernameInput = document.querySelector('.usernameInput').value;
   user.updateProfile({
     	displayName: usernameInput
-    });
-  console.log("signed up")
-})
+}).then(() => {
+  //Update successful
+}).catch((error) => {
+  console.log(error);
+});
+  console.log("signed up");
 }
 
 // Update Login, Signup, Logout Buttons
