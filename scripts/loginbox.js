@@ -42,7 +42,7 @@ if (signupButton) {
 }
 
 // Update Login, Signup, Logout Buttons
-window.onload = function() {
+firebase.auth().onAuthStateChanged(user => {
   const indexLogin = document.querySelector('#indexLogin');
   const indexSignup = document.querySelector('#indexSignup');
   const indexLogout = document.querySelector('#indexLogout');
@@ -71,7 +71,7 @@ window.onload = function() {
     indexLogout.style.visibility = "hidden";
     userHeaderText.style.visibility = "hidden";
   }
-}
+})
 
 // Login box - Get the modal
 var modal = document.getElementById('id01');
