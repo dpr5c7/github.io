@@ -38,6 +38,7 @@ signupButton.addEventListener("click", function signUp() {
 }
 
 // Update Login, Signup, Logout Buttons
+window.onload = function() {
 const indexLogin = document.querySelector('#indexLogin');
 const indexSignup = document.querySelector('#indexSignup');
 const indexLogout = document.querySelector('#indexLogout');
@@ -65,6 +66,7 @@ if (user == null) {
   indexSignup.style.visibility = "";
   indexLogout.style.visibility = "hidden";
   userHeaderText.style.visibility = "hidden";
+}
 }
 
 // Login box - Get the modal
