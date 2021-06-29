@@ -46,7 +46,7 @@ const userHeaderText = document.querySelector('#userHeaderText');
 var user = firebase.auth().currentUser;
 var name, email, photoUrl, uid, emailVerified, signedIn;
 
-if (user != null) {
+if (firebase.auth().currentUser != null) {
   name = user.displayName;
   email = user.email;
   photoUrl = user.photoURL;
@@ -60,7 +60,7 @@ if (user != null) {
   userHeaderText.innerHTML = "Welcome" + name + "!";
 }
 
-if (user == null) {
+if (firebase.auth().currentUser == null) {
   signedIn = false;
   indexLogin.style.visibility = "";
   indexSignup.style.visibility = "";
