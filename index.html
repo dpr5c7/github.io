@@ -1,76 +1,79 @@
 <!DOCTYPE html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="styles/index.css">
-		<link rel="stylesheet" href="styles/loginbox.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
-	</head>
-		<body class="body">
-	<!-- Navigation Bar -->
-		<nav class="navigation-bar">
-			<a href="index.html"><img class="logo" src="images/GS.png"></a>
-			<a class="navlink" href="news.html">NEWS</a>
-			<a class="navlink" href="mylists.html">MY LISTS</a>
-			<a class="navlink" href="#browseLists">BROWSE LISTS</a>
-			<a class="navlink" href="#reviews">REVIEWS</a>
-			<a class="navlink" href="#discussionBoard">FORUM</a>
-			<button type="button" onclick="location.href='authtest.html';" class="FAQButton">?</button>
-			<button class="homeLogin" id="indexLogout">Logout</button>
-			<a id="userHeaderText">Test</a>
-			<button onclick="document.getElementById('id01').style.display='block'" class="homeLogin" id="indexLogin">Login</button>
-			<button type="button" onclick="location.href='signup.html';" class="homeLogin" id="indexSignup">Sign Up</button>
 
-			<!-- The Modal -->
-			<div id="id01" class="modal">
-				<form class="modal-content animate" action="/action_page.php" method="post">
-					<div class="imgcontainer">
-						<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-						<img src="images/GS-small.png" alt="Avatar" class="avatar">
-					</div>
-					<div class="container">
-						<label for="email"><b>Email</b></label>
-						<input id="loginEmail" type="text" placeholder="Enter Email Address" name="email" required>
-						<label for="psw"><b>Password</b></label>
-						<input id="loginPass" type="password" placeholder="Enter Password" name="psw" required>
-						<button id="loginButton" class="loginbutton" type="button">Login</button>
-						<label>
-						<input type="checkbox" checked="checked" name="remember"> Remember me
-						</label>
-					</div>
-					<div class="container" style="background-color:#f1f1f1">
-						<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-						<span class="psw">Forgot <a href="#">password?</a></span>
-					</div>
-				</form>
-			</div>
-		</nav>
-		<div class="infobar">
-			<div class="infotext0"># of Gamers: 300</div>
-			<div class="infotext1">Games Played: 1,343</div>
-			<div class="infotext2">Games Reviewed: 4,344</div>
-		</div>
-		<div class="maincontainer">
-			<img src="images/gamingggg.jpg" alt="picture" style="width:100%;">
-			<div class="titletext">GAMER-VAULT</div>
-			<div class="titletext2">A community created by gamers, for gamers</div>
-		</div>
-			
-		<!-- Footer -->
-		<footer class="footer">
-			<a href="#"><i class="fa fa-facebook-official"></i></a>
-			<a href="#"><i class="fa fa-pinterest-p"></i></a>
-			<a href="#"><i class="fa fa-twitter"></i></a>
-			<a href="#"><i class="fa fa-flickr"></i></a>
-			<a href="#"><i class="fa fa-linkedin"></i></a>
-			<p class="footer2">
-				Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-			</p>
-		</footer>
-		<script src="scripts/loginbox.js" type="text/javascript"></script>
-	</body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/loginbox.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+</head>
+
+<body class="body">
+  <!-- Navigation Bar -->
+  <nav class="navigation-bar">
+    <a href="index.html"><img class="logo" src="images/GS.png"></a>
+    <a class="navlink" href="news.html">NEWS</a>
+    <a class="navlink" href="mylists.html">MY LISTS</a>
+    <a class="navlink" href="#browseLists">BROWSE LISTS</a>
+    <a class="navlink" href="#reviews">REVIEWS</a>
+    <a class="navlink" href="#discussionBoard">FORUM</a>
+    <button type="button" onclick="location.href='authtest.html';" class="FAQButton">?</button>
+    <button class="homeLogin" id="indexLogout">Logout</button>
+    <a id="userHeaderText">Test</a>
+    <button onclick="document.getElementById('id01').style.display='block'" class="homeLogin" id="indexLogin">Login</button>
+    <button type="button" onclick="location.href='signup.html';" class="homeLogin" id="indexSignup">Sign Up</button>
+
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="images/GS-small.png" alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+          <label for="email"><b>Email</b></label>
+          <input id="loginEmail" type="text" placeholder="Enter Email Address" name="email" required>
+          <label for="psw"><b>Password</b></label>
+          <input id="loginPass" type="password" placeholder="Enter Password" name="psw" required>
+          <button id="loginButton" class="loginbutton" type="button">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <div class="infobar">
+    <div class="infotext0"># of Gamers: 300</div>
+    <div class="infotext1">Games Played: 1,343</div>
+    <div class="infotext2">Games Reviewed: 4,344</div>
+  </div>
+  <div class="maincontainer">
+    <img src="images/gamingggg.jpg" alt="picture" style="width:100%;">
+    <div class="titletext">GAMER-VAULT</div>
+    <div class="titletext2">A community created by gamers, for gamers</div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="#"><i class="fa fa-facebook-official"></i></a>
+    <a href="#"><i class="fa fa-pinterest-p"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-flickr"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <p class="footer2">
+      Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+    </p>
+  </footer>
+  <script src="scripts/loginbox.js" type="text/javascript"></script>
+</body>
+
 </html>
