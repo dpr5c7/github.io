@@ -28,9 +28,9 @@ if (signupButton) {
     const promise = auth.createUserWithEmailAndPassword(email, pass);
     promise.catch(e => console.log(e.message));
 firebase.auth().onAuthStateChanged(user => {
-    const user = firebase.auth().currentUser;
+    const user1 = firebase.auth().currentUser;
     const usernameInput = document.querySelector('.usernameInput').value;
-    user.updateProfile({
+    user1.updateProfile({
       displayName: usernameInput
     }).then(() => {
       //Update successful
