@@ -47,6 +47,7 @@ firebase.auth().onAuthStateChanged(user => {
   const indexSignup = document.querySelector('#indexSignup');
   const indexLogout = document.querySelector('#indexLogout');
   const userHeaderText = document.querySelector('#userHeaderText');
+  const loginButton = document.querySelector('#loginButton');
   var user = firebase.auth().currentUser;
   var name, email, photoUrl, uid, emailVerified, signedIn;
 
@@ -83,8 +84,22 @@ window.onclick = function(event) {
   }
 }
 
+ // Add login event
+loginButton.addEventListener("click", function logIn() {
+ // Get email and pass
+  const loginEmail = document.querySelector('#loginEmail');
+  const loginPass = document.querySelector('#loginPass');
+  const email = loginEmail.value;
+  const pass = loginPass.value;
+  const auth = firebase.auth();
+ // Sign in
+  const promise = auth.signInWithEmailAndPassword(email, pass);
+  promise.catch(e => console.log(e.message));
+  console.log("signed in")
+});
+
 //Logout
 indexLogout.addEventListener("click", function logOut() {
   firebase.auth().signOut();
   console.log('logged out');
-});     
+});
