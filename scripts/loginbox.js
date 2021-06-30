@@ -27,7 +27,7 @@ if (signupButton) {
     // Sign in
     const promise = auth.createUserWithEmailAndPassword(email, pass);
     promise.catch(e => console.log(e.message));
-
+firebase.auth().onAuthStateChanged(user => {
     const user = firebase.auth().currentUser;
     const usernameInput = document.querySelector('.usernameInput').value;
     user.updateProfile({
@@ -37,6 +37,7 @@ if (signupButton) {
     }).catch((error) => {
       console.log(error);
     });
+}
     console.log("signed up");
   })
 }
@@ -58,19 +59,19 @@ firebase.auth().onAuthStateChanged(user => {
     emailVerified = user.emailVerified;
     uid = user.uid;
     signedIn = true;
-    indexLogin.style.visibility = "hidden";
-    indexSignup.style.visibility = "hidden";
-    indexLogout.style.visibility = "";
-    userHeaderText.style.visibility = "";
+    indexLogin.style.display = "none";
+    indexSignup.style.display = "none";
+    indexLogout.style.display = "block";
+    userHeaderText.style.visibility = "block";
     userHeaderText.innerHTML = "Welcome" + name + "!";
   }
 
   if (user == null) {
     signedIn = false;
-    indexLogin.style.visibility = "";
-    indexSignup.style.visibility = "";
-    indexLogout.style.visibility = "hidden";
-    userHeaderText.style.visibility = "hidden";
+    indexLogin.style.display = "block";
+    indexSignup.style.display = "block";
+    indexLogout.style.display = "none";
+    userHeaderText.style.display = "none";
   }
 })
 
