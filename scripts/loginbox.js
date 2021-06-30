@@ -87,6 +87,7 @@ window.onclick = function(event) {
 }
 
  // Add login event
+if (loginButton) {
 loginButton.addEventListener("click", function logIn() {
  // Get email and pass
   const loginEmail = document.querySelector('#loginEmail');
@@ -100,7 +101,8 @@ loginButton.addEventListener("click", function logIn() {
   console.log("signed in")
   document.getElementById('id01').style.display='none';
 });
-
+}
+  
 //Logout
 indexLogout.addEventListener("click", function logOut() {
   firebase.auth().signOut();
@@ -112,6 +114,7 @@ indexLogout.addEventListener("click", function logOut() {
 
 googleButton = document.querySelector(".googleButton");
 
+if (googleButton) {
 googleButton.addEventListener("click", function() {
   console.log("Google Button Clicked!");
   var provider = new firebase.auth.GoogleAuthProvider();
@@ -137,3 +140,4 @@ googleButton.addEventListener("click", function() {
       // ...
     });
 })
+}
