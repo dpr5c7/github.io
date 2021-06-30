@@ -96,6 +96,7 @@ loginButton.addEventListener("click", function logIn() {
   const promise = auth.signInWithEmailAndPassword(email, pass);
   promise.catch(e => console.log(e.message));
   console.log("signed in")
+  document.getElementById('id01').style.display='none';
 });
 
 //Logout
