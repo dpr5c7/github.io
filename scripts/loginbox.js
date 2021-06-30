@@ -104,10 +104,13 @@ loginButton.addEventListener("click", function logIn() {
 }
   
 //Logout
+const indexLogout = document.querySelector('#indexLogout');
+if (indexLogout) {
 indexLogout.addEventListener("click", function logOut() {
   firebase.auth().signOut();
   console.log('logged out');
 });
+}
 
 // Google Sign In
 
