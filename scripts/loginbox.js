@@ -82,3 +82,9 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+//Logout
+indexLogout.addEventListener("click", function logOut() {
+  firebase.auth().signOut();
+  console.log('logged out');
+});     
