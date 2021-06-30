@@ -62,7 +62,7 @@ firebase.auth().onAuthStateChanged(user => {
     indexLogin.style.display = "none";
     indexSignup.style.display = "none";
     indexLogout.style.display = "block";
-    userHeaderText.style.visibility = "block";
+    userHeaderText.style.display = "block";
     userHeaderText.innerHTML = "Welcome" + name + "!";
   }
 
