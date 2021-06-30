@@ -113,6 +113,7 @@ indexLogout.addEventListener("click", function logOut() {
 googleButton = document.querySelector(".googleButton");
 
 googleButton.addEventListener("click", function() {
+  console.log("Google Button Clicked!");
   var provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth()
     .signInWithPopup(provider)
