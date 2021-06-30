@@ -12,7 +12,6 @@ var config = {
 firebase.initializeApp(config);
 var clouddb = firebase.firestore();
 
-
 // Signup Event 
 const emailInput = document.querySelector('.emailInput');
 const passInput = document.querySelector('.passInput');
@@ -49,7 +48,6 @@ firebase.auth().onAuthStateChanged(user => {
   const indexSignup = document.querySelector('#indexSignup');
   const indexLogout = document.querySelector('#indexLogout');
   const userHeaderText = document.querySelector('#userHeaderText');
-  const loginButton = document.querySelector('#loginButton');
   var user = firebase.auth().currentUser;
   var name, email, photoUrl, uid, emailVerified, signedIn;
 
@@ -87,6 +85,8 @@ window.onclick = function(event) {
 }
 
  // Add login event
+const loginButton = document.querySelector('#loginButton');
+
 if (loginButton) {
 loginButton.addEventListener("click", function logIn() {
  // Get email and pass
@@ -108,7 +108,6 @@ indexLogout.addEventListener("click", function logOut() {
   firebase.auth().signOut();
   console.log('logged out');
 });
-
 
 // Google Sign In
 
