@@ -39,7 +39,7 @@ firebase.auth().onAuthStateChanged(user => {
     });
 })
     console.log("signed up");
-    window.location.href = 'https://dpr5c7.github.io/github.io/index.html';
+    //window.location.href = 'https://dpr5c7.github.io/github.io/index.html';
   })
 }
 
